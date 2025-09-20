@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
+<body id="top">
     <!-- Header -->
     <header class="header">
         <nav class="navbar">
@@ -23,7 +23,7 @@
                 </a>
                 <ul class="nav-menu">
                     <li class="nav-item">
-                        <a href="#home" class="nav-link">Home</a>
+                        <a href="#about" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item">
                         <a href="#about" class="nav-link">About</a>
@@ -39,29 +39,23 @@
                     <a href="#services" class="btn btn-primary btn-small">Explore Services</a>
                     <a href="#contact" class="btn btn-secondary btn-small">Get Quote</a>
                 </div>
-                <button class="hamburger" aria-expanded="false" aria-label="Toggle navigation menu">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </button>
+                <div class="hamburger-menu">
+                    <button class="hamburger" aria-expanded="false" aria-label="Navigation menu">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </button>
+                    <div class="mobile-dropdown">
+                        <a href="#about">Home</a>
+                        <a href="#about">About</a>
+                        <a href="#services">Services</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                </div>
             </div>
         </nav>
         <div class="nav-backdrop"></div>
     </header>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero-compact">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Your Trusted Service Partner</h1>
-                <p>Comprehensive business and personal services with excellence and professionalism</p>
-                <div class="hero-buttons">
-                    <a href="#services" class="btn btn-primary">Explore Services</a>
-                    <a href="#contact" class="btn btn-secondary">Get Quote</a>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- About Section -->
     <section id="about" class="about">
@@ -88,6 +82,10 @@
                 </div>
                 <div class="about-image">
                     <img src="assets/images/kkp_solution_banner.png" alt="KKP Solutions Banner" class="about-banner">
+                    <div class="trusted-partner-section">
+                        <h3>Your Trusted Service Partner</h3>
+                        <p>Comprehensive business and personal services with excellence and professionalism</p>
+                    </div>
                 </div>
             </div>
         </div>
