@@ -20,29 +20,82 @@ function initializeWebsite() {
 function handleMobileNavigation() {
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
+    const backdrop = document.querySelector('.nav-backdrop');
     
-    if (hamburger && navMenu) {
-        hamburger.addEventListener('click', function() {
-            hamburger.classList.toggle('active');
-            navMenu.classList.toggle('active');
-        });
+    if (!hamburger || !navMenu) {
+        console.error('Mobile navigation elements not found');
+        return;
+    }
+    
+    // Make sure menu starts closed
+    closeMenu();
+    
+    // Toggle menu on hamburger click
+    hamburger.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        toggleMenu();
+    });
 
-        // Close mobile menu when clicking on nav links
-        const navLinks = document.querySelectorAll('.nav-link');
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                hamburger.classList.remove('active');
-                navMenu.classList.remove('active');
-            });
+    // Close menu when clicking nav links
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            closeMenu();
         });
+    });
 
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', function(event) {
-            if (!hamburger.contains(event.target) && !navMenu.contains(event.target)) {
-                hamburger.classList.remove('active');
-                navMenu.classList.remove('active');
+    // Close menu when clicking backdrop
+    if (backdrop) {
+        backdrop.addEventListener('click', function() {
+            closeMenu();
+        });
+    }
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function(event) {
+        if (!hamburger.contains(event.target) && !navMenu.contains(event.target)) {
+            if (navMenu.classList.contains('active')) {
+                closeMenu();
             }
-        });
+        }
+    });
+    
+    // Handle window resize
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 768) {
+            closeMenu();
+        }
+    });
+    
+    // Helper functions
+    function toggleMenu() {
+        const isActive = navMenu.classList.contains('active');
+        if (isActive) {
+            closeMenu();
+        } else {
+            openMenu();
+        }
+    }
+    
+    function openMenu() {
+        navMenu.classList.add('active');
+        hamburger.classList.add('active');
+        if (backdrop) {
+            backdrop.classList.add('active');
+        }
+        document.body.style.overflow = 'hidden'; // Prevent body scroll
+        hamburger.setAttribute('aria-expanded', 'true');
+    }
+    
+    function closeMenu() {
+        navMenu.classList.remove('active');
+        hamburger.classList.remove('active');
+        if (backdrop) {
+            backdrop.classList.remove('active');
+        }
+        document.body.style.overflow = ''; // Restore body scroll
+        hamburger.setAttribute('aria-expanded', 'false');
     }
 }
 

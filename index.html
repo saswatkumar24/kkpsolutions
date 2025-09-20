@@ -28,22 +28,8 @@
                     <li class="nav-item">
                         <a href="#about" class="nav-link">About</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a href="#services" class="nav-link">Services <i class="fas fa-chevron-down"></i></a>
-                        <div class="dropdown-content">
-                            <a href="#property-management">Property Management</a>
-                            <a href="#construction">Construction</a>
-                            <a href="#interior-design">Interior Design</a>
-                            <a href="#hr-services">HR Services</a>
-                            <a href="#housekeeping">Housekeeping</a>
-                            <a href="#online-shopping">Online Shopping</a>
-                            <a href="#tax-services">Tax Services</a>
-                            <a href="#labour-services">Labour Services</a>
-                            <a href="#catering">Catering Services</a>
-                            <a href="#website-design">Website Design</a>
-                            <a href="#software-services">Software Services</a>
-                            <a href="#travel-booking">Travel Booking</a>
-                        </div>
+                    <li class="nav-item">
+                        <a href="#services" class="nav-link">Services</a>
                     </li>
                     <li class="nav-item">
                         <a href="#contact" class="nav-link">Contact</a>
@@ -53,13 +39,14 @@
                     <a href="#services" class="btn btn-primary btn-small">Explore Services</a>
                     <a href="#contact" class="btn btn-secondary btn-small">Get Quote</a>
                 </div>
-                <div class="hamburger">
+                <button class="hamburger" aria-expanded="false" aria-label="Toggle navigation menu">
                     <span class="bar"></span>
                     <span class="bar"></span>
                     <span class="bar"></span>
-                </div>
+                </button>
             </div>
         </nav>
+        <div class="nav-backdrop"></div>
     </header>
 
 
@@ -103,7 +90,7 @@
             </div>
             
             <div class="services-grid">
-                <!-- Property Management -->
+                <!-- 1. Property Management -->
                 <a href="services/property-management.html" class="service-card-link">
                     <div class="service-card" id="property-management">
                         <div class="service-icon">
@@ -121,7 +108,7 @@
                     </div>
                 </a>
 
-                <!-- Construction -->
+                <!-- 2. Construction -->
                 <a href="services/construction.html" class="service-card-link">
                     <div class="service-card" id="construction">
                         <div class="service-icon">
@@ -139,7 +126,43 @@
                     </div>
                 </a>
 
-                <!-- Interior Design -->
+                <!-- 3. Tax Services -->
+                <a href="services/tax-services.html" class="service-card-link">
+                    <div class="service-card" id="tax-services">
+                        <div class="service-icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <h3>Tax Compliance Services</h3>
+                        <p>Complete tax compliance solutions including GST, Income Tax, and all regulatory compliance services by certified professionals.</p>
+                        <ul>
+                            <li>Tax Planning</li>
+                            <li>GST Registration</li>
+                            <li>Income Tax Filing</li>
+                            <li>Business Tax Compliance</li>
+                        </ul>
+                        <div class="btn btn-outline">Learn More</div>
+                    </div>
+                </a>
+
+                <!-- 4. Travel Booking -->
+                <a href="services/travel-booking.html" class="service-card-link">
+                    <div class="service-card" id="travel-booking">
+                        <div class="service-icon">
+                            <i class="fas fa-plane"></i>
+                        </div>
+                        <h3>Travel Booking</h3>
+                        <p>Book your travel with 5-10% discount on flights, trains, buses, and cab services with convenient online booking platform.</p>
+                        <ul>
+                            <li>Flight Bookings (5-10% Off)</li>
+                            <li>Train Ticket Booking</li>
+                            <li>Bus Ticket Booking</li>
+                            <li>Cab Booking Services</li>
+                        </ul>
+                        <div class="btn btn-outline">Learn More</div>
+                    </div>
+                </a>
+
+                <!-- 5. Interior Design -->
                 <a href="services/interior-design.html" class="service-card-link">
                     <div class="service-card" id="interior-design">
                         <div class="service-icon">
@@ -157,7 +180,43 @@
                     </div>
                 </a>
 
-                <!-- HR Services -->
+                <!-- 6. Online Shopping -->
+                <a href="services/online-shopping.html" class="service-card-link">
+                    <div class="service-card" id="online-shopping">
+                        <div class="service-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <h3>Online Shopping</h3>
+                        <p>Convenient online shopping platform offering quality products with doorstep delivery and excellent customer service.</p>
+                        <ul>
+                            <li>E-commerce Solutions</li>
+                            <li>Product Sourcing</li>
+                            <li>Online Store Setup</li>
+                            <li>Digital Marketing</li>
+                        </ul>
+                        <div class="btn btn-outline">Learn More</div>
+                    </div>
+                </a>
+
+                <!-- 7. Website Design -->
+                <a href="services/website-design.html" class="service-card-link">
+                    <div class="service-card" id="website-design">
+                        <div class="service-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3>Website Design</h3>
+                        <p>Modern, responsive website design and development services to establish your strong online presence and attract customers.</p>
+                        <ul>
+                            <li>Website Development</li>
+                            <li>E-commerce Sites</li>
+                            <li>Mobile Responsive Design</li>
+                            <li>SEO Optimization</li>
+                        </ul>
+                        <div class="btn btn-outline">Learn More</div>
+                    </div>
+                </a>
+
+                <!-- 8. HR Services -->
                 <a href="services/hr-services.html" class="service-card-link">
                     <div class="service-card" id="hr-services">
                         <div class="service-icon">
@@ -175,7 +234,7 @@
                     </div>
                 </a>
 
-                <!-- Housekeeping -->
+                <!-- 9. Housekeeping -->
                 <a href="services/housekeeping.html" class="service-card-link">
                     <div class="service-card" id="housekeeping">
                         <div class="service-icon">
@@ -193,43 +252,7 @@
                     </div>
                 </a>
 
-                <!-- Online Shopping -->
-                <a href="services/online-shopping.html" class="service-card-link">
-                    <div class="service-card" id="online-shopping">
-                        <div class="service-icon">
-                            <i class="fas fa-shopping-cart"></i>
-                        </div>
-                        <h3>Online Shopping</h3>
-                        <p>Convenient online shopping platform offering quality products with doorstep delivery and excellent customer service.</p>
-                        <ul>
-                            <li>Wide Product Range</li>
-                            <li>Doorstep Delivery</li>
-                            <li>Secure Payments</li>
-                            <li>Customer Support</li>
-                        </ul>
-                        <div class="btn btn-outline">Learn More</div>
-                    </div>
-                </a>
-
-                <!-- Tax Services -->
-                <a href="services/tax-services.html" class="service-card-link">
-                    <div class="service-card" id="tax-services">
-                        <div class="service-icon">
-                            <i class="fas fa-calculator"></i>
-                        </div>
-                        <h3>Tax Compliance Services</h3>
-                        <p>Complete tax compliance solutions including GST, Income Tax, and all regulatory compliance services by certified professionals.</p>
-                        <ul>
-                            <li>GST Registration & Filing</li>
-                            <li>Income Tax Services</li>
-                            <li>Tax Planning</li>
-                            <li>Compliance Management</li>
-                        </ul>
-                        <div class="btn btn-outline">Learn More</div>
-                    </div>
-                </a>
-
-                <!-- Labour Services -->
+                <!-- 10. Labour Services -->
                 <a href="services/labour-services.html" class="service-card-link">
                     <div class="service-card" id="labour-services">
                         <div class="service-icon">
@@ -238,16 +261,16 @@
                         <h3>Labour Services</h3>
                         <p>Skilled and unskilled labour services for various industries with reliable, trained workforce and flexible arrangements.</p>
                         <ul>
-                            <li>Skilled Labour Supply</li>
-                            <li>Contract Labour</li>
+                            <li>Skilled Workers</li>
+                            <li>Construction Labor</li>
                             <li>Temporary Staffing</li>
-                            <li>Labour Compliance</li>
+                            <li>Project-based Teams</li>
                         </ul>
                         <div class="btn btn-outline">Learn More</div>
                     </div>
                 </a>
 
-                <!-- Catering Services -->
+                <!-- 11. Catering Services -->
                 <a href="services/catering.html" class="service-card-link">
                     <div class="service-card" id="catering">
                         <div class="service-icon">
@@ -257,33 +280,15 @@
                         <p>Professional catering services for events, corporate functions, and special occasions with delicious food and excellent presentation.</p>
                         <ul>
                             <li>Event Catering</li>
-                            <li>Corporate Meals</li>
-                            <li>Special Occasions</li>
-                            <li>Custom Menus</li>
+                            <li>Corporate Catering</li>
+                            <li>Wedding Catering</li>
+                            <li>Party Planning</li>
                         </ul>
                         <div class="btn btn-outline">Learn More</div>
                     </div>
                 </a>
 
-                <!-- Website Design -->
-                <a href="services/website-design.html" class="service-card-link">
-                    <div class="service-card" id="website-design">
-                        <div class="service-icon">
-                            <i class="fas fa-globe"></i>
-                        </div>
-                        <h3>Website Design</h3>
-                        <p>Modern, responsive website design and development services to establish your strong online presence and attract customers.</p>
-                        <ul>
-                            <li>Custom Website Design</li>
-                            <li>Responsive Development</li>
-                            <li>E-commerce Solutions</li>
-                            <li>SEO Optimization</li>
-                        </ul>
-                        <div class="btn btn-outline">Learn More</div>
-                    </div>
-                </a>
-
-                <!-- Software Services -->
+                <!-- 12. Software Services -->
                 <a href="services/software-services.html" class="service-card-link">
                     <div class="service-card" id="software-services">
                         <div class="service-icon">
@@ -296,24 +301,6 @@
                             <li>Mobile App Development</li>
                             <li>Database Management</li>
                             <li>System Integration</li>
-                        </ul>
-                        <div class="btn btn-outline">Learn More</div>
-                    </div>
-                </a>
-
-                <!-- Travel Booking -->
-                <a href="services/travel-booking.html" class="service-card-link">
-                    <div class="service-card" id="travel-booking">
-                        <div class="service-icon">
-                            <i class="fas fa-plane"></i>
-                        </div>
-                        <h3>Travel Booking</h3>
-                        <p>Book your travel with 5-10% discount on flights, trains, buses, and cab services with convenient online booking platform.</p>
-                        <ul>
-                            <li>Flight Bookings (5-10% Off)</li>
-                            <li>Train Ticket Booking</li>
-                            <li>Bus Ticket Booking</li>
-                            <li>Cab Booking Services</li>
                         </ul>
                         <div class="btn btn-outline">Learn More</div>
                     </div>
@@ -417,32 +404,32 @@
                     <h3>KKP Solutions</h3>
                     <p>Your trusted partner for comprehensive business solutions. We provide quality services across multiple domains to help your business grow.</p>
                     <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="index.html" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="index.html" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="index.html" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="index.html" class="social-link"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
                 <div class="footer-section">
                     <h3>Services</h3>
                     <ul>
-                        <li><a href="#property-management">Property Management</a></li>
-                        <li><a href="#construction">Construction</a></li>
-                        <li><a href="#interior-design">Interior Design</a></li>
-                        <li><a href="#hr-services">HR Services</a></li>
-                        <li><a href="#housekeeping">Housekeeping</a></li>
+                        <li><a href="services/property-management.html">Property Management</a></li>
+                        <li><a href="services/construction.html">Construction</a></li>
+                        <li><a href="services/interior-design.html">Interior Design</a></li>
+                        <li><a href="services/hr-services.html">HR Services</a></li>
+                        <li><a href="services/housekeeping.html">Housekeeping</a></li>
+                        <li><a href="services/online-shopping.html">Online Shopping</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h3>More Services</h3>
                     <ul>
-                        <li><a href="online-shopping.html">Online Shopping</a></li>
-                        <li><a href="tax-services.html">Tax Services</a></li>
-                        <li><a href="labour-services.html">Labour Services</a></li>
-                        <li><a href="catering.html">Catering Services</a></li>
-                        <li><a href="website-design.html">Website Design</a></li>
-                        <li><a href="software-services.html">Software Services</a></li>
-                        <li><a href="travel-booking.html">Travel Booking</a></li>
+                        <li><a href="services/tax-services.html">Tax Services</a></li>
+                        <li><a href="services/labour-services.html">Labour Services</a></li>
+                        <li><a href="services/catering.html">Catering Services</a></li>
+                        <li><a href="services/website-design.html">Website Design</a></li>
+                        <li><a href="services/software-services.html">Software Services</a></li>
+                        <li><a href="services/travel-booking.html">Travel Booking</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
