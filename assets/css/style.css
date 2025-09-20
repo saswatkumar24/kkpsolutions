@@ -311,11 +311,17 @@ body {
         justify-content: space-between;
         align-items: center;
         gap: 1rem;
+        padding: 0 15px;
     }
     
     .nav-logo {
         margin-left: 0;
         flex-shrink: 0;
+        max-width: 200px;
+    }
+    
+    .nav-logo .logo img {
+        max-height: 40px;
     }
     
     .nav-menu {
@@ -698,8 +704,18 @@ body {
 
 /* About Section */
 .about {
-    padding: 120px 0 80px;
+    padding: 80px 0;
     background: var(--bg-white);
+}
+
+@media (max-width: 768px) {
+    .hero-compact {
+        padding: 100px 0 40px;
+    }
+    
+    .about {
+        padding: 40px 0;
+    }
 }
 
 .about-content {
